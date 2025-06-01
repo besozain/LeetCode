@@ -25,7 +25,7 @@ public class Solution {
       }
       if (romanChars.Contains(s[i]) && i <( s.Length-1))
       {
-          if (romanChars2[Array.IndexOf(s.ToArray(), s[i])].Contains(s[i+1])) 
+           if (romanChars2[Array.IndexOf(romanChars, s[i])].Contains(s[i+1]))  
                result -= 2 * romanNumerals[s[i]];
       }
 
