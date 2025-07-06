@@ -16,7 +16,7 @@ public class Solution {
     Array.Sort(nums);
     for (int i = 0; i < nums.Length; i++)
     {
-        Console.WriteLine(nums[i]);
+   
         if (nums[i] <= replacer)
         {
             res++;
