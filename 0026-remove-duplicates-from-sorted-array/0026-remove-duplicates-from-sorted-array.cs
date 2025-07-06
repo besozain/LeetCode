@@ -8,16 +8,20 @@ public class Solution {
         if (isduplicated(nums, nums[i]))
         {
             nums[i] = replacer;
+            replacer--;
         }
+
     }
 
     Array.Sort(nums);
     for (int i = 0; i < nums.Length; i++)
     {
-        if (nums[i] != replacer)
+        Console.WriteLine(nums[i]);
+        if (nums[i] <= replacer)
         {
             res++;
         }
+
     }
     return res;
 
