@@ -1,14 +1,20 @@
 public class Solution {
     public bool IsHappy(int n) {
-       if(n == 1)
+    if(n == 1)
         {
             return true;
         }
         int num = n;
-        List<int> lst = new List<int>();
+        HashSet<int> uniques = new HashSet<int>();
+        List<int> values = new List<int>();
         do
         {
-            lst.Add(num);
+            uniques.Add(num);
+            values.Add(num);
+            if(uniques.Count != values.Count)
+            {
+                return false;
+            }
             string strNum = num.ToString();
             double res = 0;
             for(int i = 0; i < strNum.Length; i++)
@@ -16,10 +22,7 @@ public class Solution {
                 res += Math.Pow(Convert.ToDouble($"{strNum[i]}"), 2);
             }
             num = (int)res;
-            if (lst.Contains(num))
-            {
-                return false;
-            }
+
         } while (num != 1);
         return true;
     }
