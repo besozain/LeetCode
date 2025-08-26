@@ -1,6 +1,6 @@
 public class Solution {
     public bool IsHappy(int n) {
-        if(n == 1)
+       if(n == 1)
         {
             return true;
         }
